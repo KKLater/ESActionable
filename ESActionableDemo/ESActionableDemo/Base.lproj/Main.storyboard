@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hTz-u9-osP">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ywV-8l-ftD">
+            <objects>
+                <navigationController id="hTz-u9-osP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zFp-cj-eRz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="StT-FO-ovJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Jv-Sd-snU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1537" y="269"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ESActionsDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udd-Rq-nAz">
+                                <rect key="frame" x="131.5" y="208" width="151" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="HsA-mJ-sLL"/>
+                                </constraints>
+                                <state key="normal" title="NotificationActionTest"/>
+                                <connections>
+                                    <action selector="notificationActionTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pu4-mp-cEg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIS-E6-vAC">
+                                <rect key="frame" x="146" y="268" width="122" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2EK-aT-ZVf"/>
+                                </constraints>
+                                <state key="normal" title="ControlActionTest"/>
+                                <connections>
+                                    <action selector="controlActionTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0kD-j6-BF8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Grc-zc-xG8">
+                                <rect key="frame" x="127" y="328" width="160" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="53y-4p-LqV"/>
+                                </constraints>
+                                <state key="normal" title="GestureRecognizerTest"/>
+                                <connections>
+                                    <action selector="gestureRecognizerTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mTZ-Iv-3u7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvl-kx-7FP">
+                                <rect key="frame" x="114.5" y="388" width="185" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="45e-4F-40s"/>
+                                </constraints>
+                                <state key="normal" title="UIBarButtonItemActionTest"/>
+                                <connections>
+                                    <action selector="barButtonItemTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PgU-xe-FmW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8b-OV-Has">
+                                <rect key="frame" x="138.5" y="148" width="137" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="upF-wM-sP3"/>
+                                </constraints>
+                                <state key="normal" title="KeyboardActionTest"/>
+                                <connections>
+                                    <action selector="keyboardTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XqA-0v-w5d"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yvl-kx-7FP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IM8-xW-x2C"/>
+                            <constraint firstItem="udd-Rq-nAz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="K26-nO-0xB"/>
+                            <constraint firstItem="Grc-zc-xG8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ouf-9Y-9jD"/>
+                            <constraint firstItem="udd-Rq-nAz" firstAttribute="top" secondItem="q8b-OV-Has" secondAttribute="bottom" constant="20" id="Pji-ur-7nr"/>
+                            <constraint firstItem="YIS-E6-vAC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V8S-BM-GT3"/>
+                            <constraint firstItem="udd-Rq-nAz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WxK-aZ-6vD"/>
+                            <constraint firstItem="YIS-E6-vAC" firstAttribute="top" secondItem="udd-Rq-nAz" secondAttribute="bottom" constant="20" id="grb-ox-AB1"/>
+                            <constraint firstItem="yvl-kx-7FP" firstAttribute="top" secondItem="Grc-zc-xG8" secondAttribute="bottom" constant="20" id="mqE-Xy-R10"/>
+                            <constraint firstItem="Grc-zc-xG8" firstAttribute="top" secondItem="YIS-E6-vAC" secondAttribute="bottom" constant="20" id="ouh-ip-N9C"/>
+                            <constraint firstItem="q8b-OV-Has" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="snl-ij-mN7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3gu-Pw-V4H"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-317" y="269"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

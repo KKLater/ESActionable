@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotificationViewController" customModule="ESActionsDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSS-6k-gdv">
+                    <rect key="frame" x="20" y="164" width="167" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="jFq-OY-r0y"/>
+                    </constraints>
+                    <state key="normal" title="Observe1"/>
+                    <connections>
+                        <action selector="addObserver1:" destination="-1" eventType="touchUpInside" id="zqA-s9-2HQ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poo-HL-TTT">
+                    <rect key="frame" x="20" y="224" width="167" height="30"/>
+                    <state key="normal" title="Observe2"/>
+                    <connections>
+                        <action selector="addObserver2:" destination="-1" eventType="touchUpInside" id="Tsk-nE-DOG"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjM-Dv-YIV">
+                    <rect key="frame" x="20" y="274" width="167" height="30"/>
+                    <state key="normal" title="BtObserve3"/>
+                    <connections>
+                        <action selector="addObserver3:" destination="-1" eventType="touchUpInside" id="kgX-vr-ztz"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75p-mv-YXE">
+                    <rect key="frame" x="217" y="164" width="177" height="30"/>
+                    <state key="normal" title="Unobserve1"/>
+                    <connections>
+                        <action selector="removeObserver1:" destination="-1" eventType="touchUpInside" id="TQ1-Fs-wyD"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dl-1H-hqm">
+                    <rect key="frame" x="217" y="224" width="177" height="30"/>
+                    <state key="normal" title="Unobserve2"/>
+                    <connections>
+                        <action selector="removeObserver2:" destination="-1" eventType="touchUpInside" id="JyG-n7-q7o"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2BN-iL-mjg">
+                    <rect key="frame" x="217" y="274" width="177" height="30"/>
+                    <state key="normal" title="BtUnobserver3"/>
+                    <connections>
+                        <action selector="removeObserver3:" destination="-1" eventType="touchUpInside" id="xcY-Ea-G9W"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmN-gq-Ijd">
+                    <rect key="frame" x="152" y="344" width="110" height="30"/>
+                    <state key="normal" title="PostNotification"/>
+                    <connections>
+                        <action selector="postNotification:" destination="-1" eventType="touchUpInside" id="OqD-bf-LVU"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="poo-HL-TTT" firstAttribute="top" secondItem="CSS-6k-gdv" secondAttribute="bottom" constant="20" id="4G4-pt-9CH"/>
+                <constraint firstItem="2BN-iL-mjg" firstAttribute="top" secondItem="tjM-Dv-YIV" secondAttribute="top" id="7S6-jr-JHE"/>
+                <constraint firstItem="pmN-gq-Ijd" firstAttribute="top" secondItem="tjM-Dv-YIV" secondAttribute="bottom" constant="40" id="Ecy-lb-4MS"/>
+                <constraint firstItem="CSS-6k-gdv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="120" id="HES-HU-3fR"/>
+                <constraint firstItem="pmN-gq-Ijd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Hhv-VW-wgf"/>
+                <constraint firstItem="2BN-iL-mjg" firstAttribute="width" secondItem="8dl-1H-hqm" secondAttribute="width" id="KNP-VO-VLE"/>
+                <constraint firstItem="8dl-1H-hqm" firstAttribute="width" secondItem="75p-mv-YXE" secondAttribute="width" id="MCB-Vi-oGP"/>
+                <constraint firstItem="8dl-1H-hqm" firstAttribute="top" secondItem="poo-HL-TTT" secondAttribute="top" id="MKK-Us-9Go"/>
+                <constraint firstItem="8dl-1H-hqm" firstAttribute="leading" secondItem="75p-mv-YXE" secondAttribute="leading" id="NKO-Sv-afp"/>
+                <constraint firstItem="75p-mv-YXE" firstAttribute="top" secondItem="CSS-6k-gdv" secondAttribute="top" id="PJH-n3-Hr9"/>
+                <constraint firstItem="tjM-Dv-YIV" firstAttribute="width" secondItem="poo-HL-TTT" secondAttribute="width" id="Sce-pz-alj"/>
+                <constraint firstItem="75p-mv-YXE" firstAttribute="width" secondItem="CSS-6k-gdv" secondAttribute="width" multiplier="1.06122" id="Tg6-vP-ff5"/>
+                <constraint firstItem="75p-mv-YXE" firstAttribute="leading" secondItem="CSS-6k-gdv" secondAttribute="trailing" constant="30" id="Tvu-Tq-YcW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="75p-mv-YXE" secondAttribute="trailing" constant="20" id="VN4-aj-LRR"/>
+                <constraint firstItem="poo-HL-TTT" firstAttribute="height" secondItem="CSS-6k-gdv" secondAttribute="height" multiplier="0.75" id="X4N-Zb-IbM"/>
+                <constraint firstItem="poo-HL-TTT" firstAttribute="leading" secondItem="CSS-6k-gdv" secondAttribute="leading" id="dB9-XD-x7W"/>
+                <constraint firstItem="tjM-Dv-YIV" firstAttribute="leading" secondItem="poo-HL-TTT" secondAttribute="leading" id="dzA-GC-dfB"/>
+                <constraint firstItem="poo-HL-TTT" firstAttribute="width" secondItem="CSS-6k-gdv" secondAttribute="width" id="hoJ-4f-gxH"/>
+                <constraint firstItem="2BN-iL-mjg" firstAttribute="leading" secondItem="8dl-1H-hqm" secondAttribute="leading" id="kOm-CF-doK"/>
+                <constraint firstItem="tjM-Dv-YIV" firstAttribute="top" secondItem="poo-HL-TTT" secondAttribute="bottom" constant="20" id="qCk-G2-jgp"/>
+                <constraint firstItem="poo-HL-TTT" firstAttribute="trailing" secondItem="CSS-6k-gdv" secondAttribute="trailing" id="vnG-6q-e43"/>
+                <constraint firstItem="CSS-6k-gdv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="yA7-tS-bvR"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="82"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

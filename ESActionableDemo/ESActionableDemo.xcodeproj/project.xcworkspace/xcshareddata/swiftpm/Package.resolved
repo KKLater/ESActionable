@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ESActionable",
+        "repositoryURL": "https://github.com/KKLater/ESActionable.git",
+        "state": {
+          "branch": "main",
+          "revision": "ea2eb774f09b8d26d95ed2be2b6ea1bebcf994cf",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
