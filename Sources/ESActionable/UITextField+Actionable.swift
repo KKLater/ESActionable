@@ -27,14 +27,14 @@ public extension UITextField {
         self.delegate = self.delegateTarget
         let action = ParametizedAction(action)
         action.key = "textFieldDidChangeSelection"
-        retain(action)
+        delegateTarget.retain(action)
     }
     
     func didEndEditing<T: UITextField>(action: @escaping (T) -> Void) {
         self.delegate = self.delegateTarget
         let action = ParametizedAction(action)
         action.key = "textFieldDidEndEditing"
-        retain(action)
+        delegateTarget.retain(action)
     }
 }
 
