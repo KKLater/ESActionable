@@ -10,9 +10,14 @@ import ESActionable
 
 class KeyboardObserveTestViewController: UIViewController {
     
+    @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var textView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        textField.didChangeSelection { [unowned self] (textField) in
+            print(textField)
+        }
         
         keyboardWillShow { [unowned self] (info) in
             let text = "keyboardWillShow:\n\n    animationCure: \(String(describing: info.animationCure)),\n    animationDuration: \(info.animationDuration),\n    beginFrame: \(String(describing: info.beginFrame)), \n    endFrame: \(String(describing: info.endFrame)), \n    isLocal: \(info.isLocal)"

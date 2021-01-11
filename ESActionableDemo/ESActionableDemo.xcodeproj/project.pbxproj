@@ -399,7 +399,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/KKLater/ESActionable.git";
 			requirement = {
-				branch = main;
+				branch = dev;
 				kind = branch;
 			};
 		};

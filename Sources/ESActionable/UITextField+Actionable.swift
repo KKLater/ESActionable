@@ -7,24 +7,39 @@
 
 import UIKit
 
+private var delegateTargetKey: UInt8 = 0
 public extension UITextField {
     
+    fileprivate var delegateTarget: UITextFieldDelegateTarget! {
+        set {
+            objc_setAssociatedObject(self, &delegateTargetKey, newValue, .OBJC_ASSOCIATION_RETAIN)
+        }
+        get {
+            var delegateTarget = objc_getAssociatedObject(self, &delegateTargetKey) as? UITextFieldDelegateTarget
+            if delegateTarget == nil {
+                delegateTarget = UITextFieldDelegateTarget()
+                self.delegateTarget = delegateTarget
+            }
+            return delegateTarget!
+        }
+    }
     func didChangeSelection<T: UITextField>(action: @escaping (T) -> Void ) {
-        delegate = self
+        self.delegate = self.delegateTarget
         let action = ParametizedAction(action)
         action.key = "textFieldDidChangeSelection"
         retain(action)
     }
     
     func didEndEditing<T: UITextField>(action: @escaping (T) -> Void) {
-        delegate = self
+        self.delegate = self.delegateTarget
         let action = ParametizedAction(action)
         action.key = "textFieldDidEndEditing"
         retain(action)
     }
 }
 
-extension UITextField: UITextFieldDelegate {
+
+fileprivate class UITextFieldDelegateTarget:NSObject, UITextFieldDelegate {
     public func textFieldDidChangeSelection(_ textField: UITextField) {
         if let action = actions["textFieldDidChangeSelection"] as? ParametizedAction<UITextField> {
             action.perform(parameters: textField)
