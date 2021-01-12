@@ -22,6 +22,10 @@ class KeyboardObserveTestViewController: UIViewController {
         textField.didEndEditing { _ in
             print("didEndEditing")
         }
+        textField.textDidChanged()
+        textField.textDidBeginEditing()
+        textField.textDidEndEditing()
+
         
         keyboardWillShow { [unowned self] (info) in
             let text = "keyboardWillShow:\n\n    animationCure: \(String(describing: info.animationCure)),\n    animationDuration: \(info.animationDuration),\n    beginFrame: \(String(describing: info.beginFrame)), \n    endFrame: \(String(describing: info.endFrame)), \n    isLocal: \(info.isLocal)"

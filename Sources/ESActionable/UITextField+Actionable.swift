@@ -170,7 +170,7 @@ fileprivate class UITextFieldDelegateTarget:NSObject, UITextFieldDelegate {
         if let action = actions["textFieldShouldBeginEditing"] as? ReturnBoolParametizedAction<UITextField> {
             return action.perform(parameters: textField)
         }
-        return false
+        return true
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -183,7 +183,7 @@ fileprivate class UITextFieldDelegateTarget:NSObject, UITextFieldDelegate {
         if let action = actions["textFieldShouldEndEditing"] as? ReturnBoolParametizedAction<UITextField> {
             return action.perform(parameters: textField)
         }
-        return false
+        return true
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -203,7 +203,7 @@ fileprivate class UITextFieldDelegateTarget:NSObject, UITextFieldDelegate {
         if let action = actions["textFieldShouldChangeCharacters"] as? TextFieldShouldChangeCharacters<UITextField> {
             return action.perform(textField: textField, range: range, replacementString: string)
         }
-        return false
+        return true
     }
     
     public func textFieldDidChangeSelection(_ textField: UITextField) {
@@ -216,7 +216,7 @@ fileprivate class UITextFieldDelegateTarget:NSObject, UITextFieldDelegate {
         if let action = actions["textFieldShouldClear"] as? ReturnBoolParametizedAction<UITextField> {
             return action.perform(parameters: textField)
         }
-        return false
+        return true
 
     }
     
@@ -224,6 +224,6 @@ fileprivate class UITextFieldDelegateTarget:NSObject, UITextFieldDelegate {
         if let action = actions["textFieldShouldReturn"] as? ReturnBoolParametizedAction<UITextField> {
             return action.perform(parameters: textField)
         }
-        return false
+        return true
     }
 }
