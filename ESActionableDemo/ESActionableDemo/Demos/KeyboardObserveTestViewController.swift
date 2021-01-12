@@ -15,8 +15,12 @@ class KeyboardObserveTestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        textField.didChangeSelection { [unowned self] (textField) in
-            print(textField)
+        textField.didChangeSelection { _ in
+            print("didChangeSelection")
+        }
+        
+        textField.didEndEditing { _ in
+            print("didEndEditing")
         }
         
         keyboardWillShow { [unowned self] (info) in
